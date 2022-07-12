@@ -6,11 +6,12 @@ contract test{
         string name;
         uint age;
     }
+    
+    mapping (address => my_data) private user_data;
     // address  name    age
     //0x1..     Masoud  31
-    //0x2..     Mahdi`  26     
-    mapping (address => my_data) private user_data;
-
+    //0x2..     Mahdi`  26 
+    
     //memory check that string length can be stored.
     function change_name(string memory esm , uint sen) public{
         user_data[msg.sender].name =esm;
